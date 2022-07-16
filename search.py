@@ -23,12 +23,10 @@ def kimetsu_search(word, csv_name):
     # CSV書き込み
     df=pd.DataFrame(source,columns=["name"])
     # CSV指定なし
-    if csv_name == "":{
+    if csv_name == "":
         df.to_csv("./source.csv",encoding="utf_8-sig")
-    }
     # CSV指定あり
-    else:{
+    else:
         df.to_csv("./{}".format(csv_name),encoding="utf_8-sig")
-    }
     
     print(source)
